@@ -74,7 +74,7 @@
     ],
     "prefer-const": true,
     "quotemark": [
-      true,
+      false,
       "single",
       "jsx-double"
     ],
