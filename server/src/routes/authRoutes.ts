@@ -6,10 +6,12 @@ import SessionMiddleware from 'middlewares/session/handler';
 
 import AuthenticationRoutes from 'modules/Authentication/routes';
 import UserRoutes from 'modules/User/routes';
+import UserOverviewRoutes from 'modules/Overview/routes';
 
 class AuthRoutes {
   private authenticationRoutes: Router = AuthenticationRoutes;
   private userRoutes: Router = UserRoutes;
+  private userOverviewRoutes: Router = UserOverviewRoutes;
 
   private passportMiddleware = new PassportMiddleware();
   private session = new SessionMiddleware();
@@ -28,6 +30,8 @@ class AuthRoutes {
       this.session.hasValidToken,
       passport.authenticate('jwt', { session: false })
     );
+
+    this.router.use('/overview', this.userOverviewRoutes);
     this.router.use('/user', this.userRoutes);
   }
 }
