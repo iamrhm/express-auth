@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 import UserService from "./service";
-import { BasicInfoSerializer, UpdateBasicInfoSerializer } from "./validator";
+import { BasicInfoSerializer } from "./validator";
 
 import { User } from "./interface";
 
