@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   padding-top: 32px;
   background-color: #f8f8ff;
 `;
@@ -18,12 +18,15 @@ export const MenuSection = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+  width: 60%;
   height: 100%;
   padding: 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const MediaListContainer = styled.div`

@@ -88,7 +88,6 @@ const PostForm: React.FC = (): JSX.Element => {
 
   return (
     <PostContainer>
-      {console.log("id", id)}
       <PostTitleSection>
         <FormHeader>Add Your New Post</FormHeader>
       </PostTitleSection>

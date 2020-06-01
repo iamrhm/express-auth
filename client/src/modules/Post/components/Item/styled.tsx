@@ -15,6 +15,8 @@ export const PostContainer = styled(ItemContainer)`
 
 export const PostCreatorSection = styled(ItemCreatorSection)``;
 export const PostTitleSection = styled(ItemTitleSection)``;
-export const PostDescriptionSection = styled(ItemDescriptionSection)``;
+export const PostDescriptionSection = styled(ItemDescriptionSection)`
+  padding-left: 15px;
+`;
 export const PostHeaderSection = styled(ItemHeaderSection)``;
 export const PostInfoSection = styled(ItemInfoSection)``;

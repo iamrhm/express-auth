@@ -39,6 +39,7 @@ export const FormLabel = styled.p`
 export const TextInput = styled.input`
   width: 100%;
   padding: 2px 0;
+  border: none;
   border-bottom: 0.5px solid #2d2d2d40;
   min-height: 24px;
 `;
