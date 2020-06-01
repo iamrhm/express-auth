@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 
-import { State } from 'interfaces/redux';
+import { State } from "interfaces/redux";
 
-import { AccountState } from 'modules/Account/interfaces';
-import { fetchAccountInfo, FetchAccountInfoAction } from '../redux/actions';
+import { AccountState } from "modules/Account/interfaces";
+import { fetchAccountInfo, FetchAccountInfoAction } from "../redux/actions";
 
 interface IProps {
   children: ReactNode;
@@ -17,7 +17,7 @@ export const AccountContextProvider = ({ children }: IProps): JSX.Element => {
   const dispatch = useDispatch();
 
   const accountInfo: AccountState = useSelector(
-    ({ account }: State): AccountState => account
+    (state: State): AccountState => state.account
   );
 
   const fetchAccountDetail = React.useCallback((): FetchAccountInfoAction => {

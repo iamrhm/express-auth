@@ -5,10 +5,6 @@ import { State } from "interfaces/redux";
 import { SubmitNewPost, submitNewPost } from "../../redux/actions";
 
 import { AccountState } from "modules/Account/interfaces";
-import {
-  FetchAccountInfoAction,
-  fetchAccountInfo
-} from "modules/Account/redux/actions";
 
 import {
   PostContainer,
@@ -68,17 +64,8 @@ const PostForm: React.FC = (): JSX.Element => {
   const dispatch = useDispatch();
   const [state, updateState] = React.useReducer(reducer, initialState);
   const { id } = useSelector(
-    (storeState: State): AccountState => storeState.account
+    ({ account }: State): AccountState => account
   );
-
-  const fetchAccountDetail = React.useCallback(
-    (): FetchAccountInfoAction => dispatch(fetchAccountInfo()),
-    [dispatch]
-  );
-
-  React.useEffect((): void => {
-    fetchAccountDetail();
-  }, []);
 
   const postNewData = React.useCallback((): SubmitNewPost => {
     const newPostData = { ...state.postData, creator: id };
@@ -101,6 +88,7 @@ const PostForm: React.FC = (): JSX.Element => {
 
   return (
     <PostContainer>
+      {console.log("id", id)}
       <PostTitleSection>
         <FormHeader>Add Your New Post</FormHeader>
       </PostTitleSection>

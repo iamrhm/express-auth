@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 import { History } from "history";
 
 import PostReducer, { initialPostState } from "modules/Post/redux/reducer";
-import AccountReducer from "modules/Auth/redux/reducer";
+import AccountReducer from "modules/Account/redux/reducer";
 import { initialAccountState } from "modules/Account/store/initialAccountState";
 
 import AuthReducer from "modules/Auth/redux/reducer";
