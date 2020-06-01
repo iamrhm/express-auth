@@ -1,0 +1,6 @@
+{
+  "name": "Exposed",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Routes.tsx"
+}
