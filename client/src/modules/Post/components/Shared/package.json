@@ -1,0 +1,6 @@
+{
+  "name": "Shared",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Shared.tsx"
+}
